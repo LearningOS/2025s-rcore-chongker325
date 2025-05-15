@@ -20,6 +20,7 @@ pub struct OSInodeInner {
     inode: Arc<Inode>,
 }
 
+
 impl OSInode {
     /// create a new inode in memory
     pub fn new(readable: bool, writable: bool, inode: Arc<Inode>) -> Self {
