@@ -63,7 +63,6 @@ pub fn trap_handler() -> ! {
     // trace!("into {:?}", scause.cause());
     match scause.cause() {
         Trap::Exception(Exception::UserEnvCall) => {
-            //TODO!!!    
             let syscall_id = cx.x[17];
             {
                 let mut current = TASK_MANAGER.current_task();
